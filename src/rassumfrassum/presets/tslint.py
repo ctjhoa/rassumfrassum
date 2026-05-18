@@ -39,6 +39,10 @@ def _eslint_config(workspace_folder: dict | None = None) -> dict:
         'rulesCustomizations': [],
         'nodePath': None,
         'experimental': {},
+        'codeAction': {
+            'disableRuleComment': { 'enable': True, 'location': 'separateLine', },
+            'showDocumentation': { 'enable': True },
+        },
     }
     if workspace_folder:
         config['workspaceFolder'] = workspace_folder
